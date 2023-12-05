@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loading.style.display = "block";
 
     const data = {
-      to: "emanoelpontes8@gmail.com",
+      to: "emanoelpontes8@hotmail.com",
       from: "email.2@sendgrid",
       subject: "Contato do site",
       text: "Contato do site",
@@ -68,8 +68,16 @@ document.addEventListener("DOMContentLoaded", function () {
       body: JSON.stringify(data),
     })
       .then((res) => {
-        loading.style.display = "none";
-        successMessage.style.display = "block";
+        if (res.ok) {
+          loading.style.display = "none";
+          successMessage.style.display = "block";
+        } else {
+          loading.style.display = "none";
+          errorMessage.style.display = "block";
+          console.error(
+            `Erro na resposta da API: ${res.status} - ${res.statusText}`
+          );
+        }
       })
       .catch((error) => {
         console.error(error);
