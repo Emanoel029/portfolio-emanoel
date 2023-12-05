@@ -1,3 +1,33 @@
+//Scroll dos links internos da pg (suave)
+function scrollToSection(sectionId) {
+  const section = document.querySelector(sectionId);
+  if (section) {
+    let scrollOffset = 0;
+
+    if (sectionId === "#projetos") {
+      scrollOffset = section.offsetTop;
+    } else {
+      scrollOffset =
+        section.offsetTop - (window.innerHeight - section.clientHeight) / 2;
+    }
+    window.scrollTo({
+      top: scrollOffset,
+      behavior: "smooth",
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll("nav a");
+  links.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const sectionId = link.getAttribute("href");
+      scrollToSection(sectionId);
+    });
+  });
+});
+
 /*FORM de Contato*/
 
 document.addEventListener("DOMContentLoaded", function () {
