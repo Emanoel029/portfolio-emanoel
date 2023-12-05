@@ -1,0 +1,72 @@
+/*Estilo da parte de Contatos*/
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #cccccc;
+}
+
+#contact {
+  margin-bottom: 0px;
+}
+.info-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea {
+  border: none;
+  border-bottom: 1px solid #b8a7b4;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  caret-color: #ffffff;
+  font-size: 22px;
+}
+::placeholder {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%; /*Quando ocupa 100% fica cada um em uma linha*/
+  height: 50px;
+  margin: 15px 0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.submit-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+input[type="submit"] {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0; /*até resetando todos os estilos do submit*/
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.response-forms {
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+}

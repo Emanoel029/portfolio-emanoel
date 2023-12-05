@@ -25,6 +25,7 @@
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#formacao">Formação</a></li>
                 <li><a href="#experiencias">Experiências</a></li>
+                <li><a href="#contact">Dúvidas</a></li>
             </ul>
         </nav>
     </header>
@@ -267,16 +268,40 @@
                         <li>Ago/15 - Fev/16</li>
                     </ul>
                     <p class="experiencia-texto">Atendimento ao cidadão, assitência social e cidadania, capacitação e acesso a internet, emprego e trabalho, cadastro biométrico atendimento ao público em geral.</p>
-
                 </div>
             </div>
+    </section>
+    <section id="contact" aria-label="contact">
+        <div class="container">
+            <div class="header-section">
+                <h1 class="title">Vamos conversar?</h1>
+                <h2>Entre em contato comigo!</h2>
+            </div>
+            <div class="info-contact">
+                <form action="">
+                    <input type="text" name="nome" id="nome" placeholder="Nome">
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <input type="text" name="assunto" id="assunto" placeholder="Assunto">
+                    <textarea name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+
+                    <div class="submit-form">
+                        <input type="submit" value="Enviar">
+                        <img src="./Imagens/seta.svg" alt="Formulário de contado Emanoel Timbó">
+                    </div>
+                </form>
+                <p id="loading" class="response-forms" style="display: none;">Carregando..</p>
+                <p id="success-message" class="response-forms" style="display: none;">Mensagem enviada com sucesso</p>
+                <p id="erro-message" class="response-forms" style="display: none;">Erro ao enviar mensagem. Envie um e-mail para emanoelpontes8@gmail.com</p>
+            </div>
+        </div>
     </section>
 
     <footer class="footer" id="contato">
         <div class="container">
-            <p class="footer-copy"> &copy; 2023 - Desenvolvido por <strong>Emanoel Timbó</strong></p>
+            <p class="footer-copy"> &copy; 2023 - Todos os direitos reservados por <strong>Emanoel Timbó</strong></p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
