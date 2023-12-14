@@ -5,7 +5,7 @@ function scrollToSection(sectionId) {
     let scrollOffset = 0;
 
     if (sectionId === "#projetos") {
-      scrollOffset = section.offsetTop;
+      scrollOffset = section.offsetTop - 70;
     } else {
       scrollOffset =
         section.offsetTop - (window.innerHeight - section.clientHeight) / 2;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const data = {
       to: "emanoelpontes8@hotmail.com",
-      from: "email.2@sendgrid",
+      from: "emanoelpontes8@gmail.com",
       subject: "Contato do site",
       text: "Contato do site",
       html: `<p>Nome: ${nome}</p><br>
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p>Messagem: ${messagem}</p>`,
     };
 
-    fetch("", {
+    fetch("https://nodemailer-91ib.onrender.com/send-email", {
       method: "POST",
       headers: {
         "content-Type": "application/json",
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
           successMessage.style.display = "block";
         } else {
           loading.style.display = "none";
-          errorMessage.style.display = "block";
+          erroMessage.style.display = "block";
           console.error(
             `Erro na resposta da API: ${res.status} - ${res.statusText}`
           );
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => {
         console.error(error);
         loading.style.display = "none";
-        errorMessage.style.display = "block";
+        erroMessage.style.display = "block";
       });
   });
 });
