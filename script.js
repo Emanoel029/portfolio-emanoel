@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p>Messagem: ${messagem}</p>`,
     };
 
-    fetch("https://nodemailer-91ib.onrender.com/send-email", {
+    fetch("", {
       method: "POST",
       headers: {
         "content-Type": "application/json",
