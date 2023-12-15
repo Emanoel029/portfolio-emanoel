@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loading.style.display = "block";
 
     const data = {
-      to: "emanoelpontes8@hotmail.com",
+      to: "contatoemanoeltimbo8@hotmail.com",
       from: "emanoelpontes8@gmail.com",
       subject: "Contato do site",
       text: "Contato do site",
