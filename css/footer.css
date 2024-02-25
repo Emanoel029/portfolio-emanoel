@@ -12,3 +12,18 @@
 .footer-copy strong {
   color: #adbdbd;
 }
+
+.footer .voltar {
+  display: flex;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 1.1rem;
+  line-height: 1.33;
+  color: #adbdbd;
+}
+
+.c-footer {
+  display: flex;
+  justify-content: space-between; /* Coloca os itens em cada ponta da div */
+  align-items: center;
+}

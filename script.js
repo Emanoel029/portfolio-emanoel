@@ -1,31 +1,49 @@
 //Scroll dos links internos da pg (suave)
-function scrollToSection(sectionId) {
-  const section = document.querySelector(sectionId);
-  if (section) {
-    let scrollOffset = 0;
+// function scrollToSection(sectionId) {
+//   const section = document.querySelector(sectionId);
+//   if (section) {
+//     let scrollOffset = 0;
 
-    if (sectionId === "#projetos") {
-      scrollOffset = section.offsetTop - 70;
-    } else {
-      scrollOffset =
-        section.offsetTop - (window.innerHeight - section.clientHeight) / 2;
-    }
-    window.scrollTo({
-      top: scrollOffset,
-      behavior: "smooth",
-    });
-  }
+//     if (sectionId === "#projetos") {
+//       scrollOffset = section.offsetTop - 70;
+//     } else {
+//       scrollOffset =
+//         section.offsetTop - (window.innerHeight - section.clientHeight) / 2;
+//     }
+//     window.scrollTo({
+//       top: scrollOffset,
+//       behavior: "smooth",
+//     });
+//   }
+// }
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const links = document.querySelectorAll("nav a");
+//   links.forEach(function (link) {
+//     link.addEventListener("click", function (e) {
+//       e.preventDefault();
+//       const sectionId = link.getAttribute("href");
+//       scrollToSection(sectionId);
+//     });
+//   });
+// });
+
+//Scroll Suave forma de codificar aprimorada
+const linksInternos = document.querySelectorAll(".js-menu a[href^='#']"); //seleção dos links internos
+
+function scrollSelection(e) {
+  e.preventDefault(); //previne para não descer até asection bruscamente
+  const href = e.currentTarget.getAttribute("href"); //seleciona apenas o href
+  const section = document.querySelector(href); //lincando o href com a section do href clicado
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("nav a");
-  links.forEach(function (link) {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const sectionId = link.getAttribute("href");
-      scrollToSection(sectionId);
-    });
-  });
+linksInternos.forEach((i) => {
+  i.addEventListener("click", scrollSelection);
 });
 
 /*FORM de Contato*/
