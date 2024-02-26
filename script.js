@@ -46,7 +46,7 @@ linksInternos.forEach((i) => {
   i.addEventListener("click", scrollSelection);
 });
 
-/*Animação Scroll*/
+/*Animação Scroll 1*/
 
 const sections = document.querySelectorAll(".js-scroll");
 const windowMetade = window.innerHeight * 0.7;
